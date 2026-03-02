@@ -19,7 +19,7 @@ terraform {
 
 resource "aws_instance" "elk" {
   ami = "ami-0220d79f3f480ecf5"
-  vpc_security_group_ids = [ "sg-0945bfb9e18b240e0" ]
+  vpc_security_group_ids = [ "sg-080ee07db03cf22ab" ]
   instance_type = "t3.small"
 
   instance_market_options {
@@ -39,7 +39,7 @@ resource "aws_instance" "elk" {
 resource "aws_security_group" "elk_sg" {
   name        = "elk_security_group"
   description = "Allow SSH access"
-  vpc_id      = "sg-0945bfb9e18b240e0"  # replace with your VPC ID
+  vpc_id      = "sg-080ee07db03cf22ab"  # replace with your VPC ID
 
   # SSH ingress rule
   ingress {
