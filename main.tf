@@ -65,9 +65,8 @@ resource "null_resource" "ansible" {
   }
 
   provisioner "local-exec" {
-    inline = [
-      "ansible-playbook -i ${aws_instance.elk.private_ip}, elk.yml -e ansible_user=ec2-user -e ansible_password=DevOps321"
-    ]
+    command = "ansible-playbook -i ${aws_instance.elk.private_ip}, elk.yml -e ansible_user=ec2-user -e ansible_password=DevOps321"
+
   }
 
 }
