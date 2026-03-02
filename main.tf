@@ -39,7 +39,7 @@ resource "aws_instance" "elk" {
 resource "aws_security_group" "elk_sg" {
   name        = "elk_security_group"
   description = "Allow SSH access"
-  vpc_id      = "sg-080ee07db03cf22ab"  # replace with your VPC ID
+  vpc_id      = "vpc-0001808b3a64587be"  # replace with your VPC ID
 
   # SSH ingress rule
   ingress {
