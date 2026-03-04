@@ -5,8 +5,8 @@ terraform:
 
 ansible-elk:
 	git pull
-	ansible-playbook -e ansible_user=ec2-user -e ansible_password=DevOps321 elk.yml -i 172.31.70.153,
+	ansible-playbook -e ansible_user=ec2-user -e ansible_password=DevOps321 elk.yml -i 172.31.67.137,
 
 logstash:
 	git pull
-	ansible-playbook -e ansible_user=ec2-user -e ansible_password=DevOps321 logstash.yml -i 172.31.70.153,
+	ansible-playbook -e ansible_user=ec2-user -e ansible_password=DevOps321 logstash.yml -i 172.31.67.137,
