@@ -5,4 +5,4 @@ terraform:
 
 logstash:
 	git pull
-	ansible-playbook -e ansible_user=ec2-user -e ansible_password=DevOps321 logstash.yml -i 172.31.74.91,
+	ansible-playbook -e ansible_user=ec2-user -e ansible_password=DevOps321 logstash.yml -i 172.31.75.0,
