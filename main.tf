@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-      bucket = "terraform-sandeep0088"
+      bucket = "s-devops"
       key    = "elk/terraform.tfstate"
       region = "us-east-1"
     }
@@ -19,7 +19,7 @@ terraform {
 
 resource "aws_instance" "elk" {
   ami = "ami-0220d79f3f480ecf5"
-  vpc_security_group_ids = [ "sg-080ee07db03cf22ab" ]
+  vpc_security_group_ids = [ "sg-03dfc56f63b6d06c5" ]
   instance_type = "t3.small"
 
   instance_market_options {
@@ -39,7 +39,7 @@ resource "aws_instance" "elk" {
 resource "aws_security_group" "elk_sg" {
   name        = "elk_security_group"
   description = "Allow SSH access"
-  vpc_id      = "vpc-0001808b3a64587be"  # replace with your VPC ID
+  vpc_id      = "vpc-02b97443d62834cfc"  # replace with your VPC ID
 
   # SSH ingress rule
   ingress {
